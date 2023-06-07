@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <mat-icon>local_fire_department</mat-icon>
+    <span>Kanban Fire</span>
+    <mat-chip>
+      <img matChipAvatar [src]="getUserInfo.Url" alt="getUserInfo.name"/>
+      {{getUserInfo.name}}
+    </mat-chip>
+    <button mat-stroked-button (click)="logout()">log out</button>
+</mat-toolbar>
+<div class="messgae-list">
+  <div *ngFor="let msg of messages; index as i;" class="messgae">
+    <mat-card>
+      <mat-card-content>{{msg.message}}</mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="message-area">
+    <mat-form-field appearance="fill">
+      <mat-label>Fill form field</mat-label>
+      <input matInput placeholder="Placeholder" [(ngModel)]="msg">
+    </mat-form-field>
+    <div class="message-send">
+      <button (click)="sendMessage()" mat-button color="primary">send</button>
+    </div>
+</div>
