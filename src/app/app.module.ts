@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { enviornment } from 'src/enviornments/enviornment';
+import { enviornment } from 'src/enviornments/enviornment.env';
 import { ChatpageComponent } from './chatpage/chatpage.component';
 import { appRoutes } from 'src/routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
